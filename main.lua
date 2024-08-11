@@ -122,7 +122,8 @@ local function setupGui()
     OLDMoney.HoverText.Font = Enum.Font.Arcade
     newtogglehud.Parent = OLDMain
     OLDMain.Frames.Settings.CodeBox:Destroy()
-    OLDMain.Frames.Settings.TradeTextBox:Destroy()
+    --OLDMain.Frames.Settings.TradeTextBox:Destroy()
+    OLDMain.Frames.Settings.TradeTextBox.Visible = false
     OLDMain.Frames.Settings.HUDBack:Destroy()
     for i,v in pairs(NEWMain.Frames.Settings:GetChildren()) do
         if v.Name ~= "Information" then
