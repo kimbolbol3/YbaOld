@@ -93,7 +93,7 @@ local function setupGui()
             stylestorage[`Slot{i}`].Spec.Text = LocalPlayer.PlayerStats:FindFirstChild(`StyleSlot{i}`).Value
             stylestorage[`Slot{i}`].Swap.MouseButton1Click:Connect(function()
                 stylestorage[`Slot{i}`].Spec.Text = LocalPlayer.PlayerStats.Spec.Value
-                LocalCharacter.RemoteEvent:FireServer("SwapStand",`Slot{i}`)
+                LocalCharacter.RemoteEvent:FireServer("SwapStyle",`StyleSlot{i}`)
             end)
         else
             stylestorage[`Slot{i}`].Spec:Destroy()
