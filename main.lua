@@ -358,12 +358,27 @@ local function setupGui()
 
     NEWMain.ToggleStands.MouseButton1Click:Connect(function()
         ToggleFrame(standstorage)
+        for i,v in pairs(standstorage:GetDescendants()) do
+            if v:IsA"TextButton" or v:IsA"ImageButton" or v:IsA"TextLabel" or v:IsA"ImageLabel" or v:IsA"TextBox" then
+                v.Visible = true
+            end
+        end
     end)
     standstorage.SwitchStorages.MouseButton1Click:Connect(function()
         ToggleFrame(stylestorage)
+        for i,v in pairs(stylestorage:GetDescendants()) do
+            if v:IsA"TextButton" or v:IsA"ImageButton" or v:IsA"TextLabel" or v:IsA"ImageLabel" or v:IsA"TextBox" then
+                v.Visible = true
+            end
+        end
     end)
     stylestorage.SwitchStorages.MouseButton1Click:Connect(function()
         ToggleFrame(standstorage)
+        for i,v in pairs(stylestorage:GetDescendants()) do
+            if v:IsA"TextButton" or v:IsA"ImageButton" or v:IsA"TextLabel" or v:IsA"ImageLabel" or v:IsA"TextBox" then
+                v.Visible = true
+            end
+        end
     end)
 
     SkillTre.Spec.MouseButton1Click:Connect(function()
